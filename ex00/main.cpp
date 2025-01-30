@@ -17,8 +17,9 @@
 
 int	main(void)
 {
-	Zombie	all;
+	Zombie	zbi("zbi");
 
-	(void)all;
+	zbi.announce();
+	zbi.randomChump("Talan");
 	return (0);
 }

@@ -11,14 +11,7 @@
 /* ************************************************************************** */
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name) {
-	this->name = name;
-};
-
-Zombie::~Zombie() {
-	std::cout << this->name << " has been destroyed" << std::endl;
-};
-
-void	Zombie::announce() {
-	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+void	Zombie::randomChump( std::string name ) {
+	Zombie	zbi(name);
+	zbi.announce();
 }
