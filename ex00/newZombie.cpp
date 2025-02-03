@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "Zombie.hpp"
 
-Zombie*	Zombie::newZombie( std::string name ) {
+Zombie*	newZombie( std::string name ) {
 	Zombie	*zbi = new Zombie(name);
 	return (zbi);
 }

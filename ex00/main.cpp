@@ -20,6 +20,5 @@ int	main(void)
 	Zombie	zbi("zbi");
 
 	zbi.announce();
-	zbi.randomChump("Talan");
 	return (0);
 }
