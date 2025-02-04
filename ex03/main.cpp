@@ -9,6 +9,10 @@
 /*   Updated: 2025/02/04 02:32:12 by tespandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stdio.h>
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 #include <iostream>
 #include <string>
 #include <cstring>
@@ -21,15 +25,16 @@ int main(void)
 		HumanA bob("Bob", club);
 		bob.attack();
 		club.setType("some other type of club");
+		std::cout << club.getType() << "\n";
 		bob.attack();
 	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
+	// {
+	// 	Weapon club = Weapon("crude spiked club");
+	// 	HumanB jim("Jim");
+	// 	jim.setWeapon(club);
+	// 	jim.attack();
+	// 	club.setType("some other type of club");
+	// 	jim.attack();
+	// }
+	return (0);
 }
-return

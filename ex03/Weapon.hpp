@@ -9,8 +9,8 @@
 /*   Updated: 2025/02/04 02:37:22 by tespandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#ifndef Weapon_hpp
-# define Weapon_hpp
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
 #include <iostream>
 #include <cstdlib>
@@ -20,8 +20,12 @@ class Weapon {
 		std::string type;
 	
 	public:
-		void	getType();
-		void	setType();
+		Weapon(std::string wpn_type);
+		Weapon();
+		~Weapon();
+		
+		const std::string &getType();
+		void	setType(std::string data);
 
 };
 
