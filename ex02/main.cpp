@@ -6,10 +6,9 @@
 /*   By: tespandj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 01:15:47 by tespandj          #+#    #+#             */
-/*   Updated: 2025/02/04 02:28:54 by tespandj         ###   ########.fr       */
+/*   Updated: 2025/02/04 01:24:26 by tespandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "Zombie.hpp"
 #include <iostream>
 #include <string>
 #include <cstring>
@@ -17,15 +16,23 @@
 
 int	main(void)
 {
-	Zombie	*zbi = NULL;
+	std::string	str = "data";
+	std::string	*stringPTR = &str;
+	std::string	& stringREF = str;
+	
 
-	zbi = zombieHorde(10, "je suis talan");
-	for(int x = 0; x < 10; ++x) {
-		zbi[x].announce();
-	}
-	delete [] zbi;
+	std::cout << "\n\tMemory adresses" << std::endl;
+	std::cout << "var: " << &str  << std::endl;
+	std::cout << "ref: " << &stringREF  << std::endl;
+	std::cout << "ptr: " << &stringPTR  << std::endl;
+
+
+
+	std::cout << "\n\t\tValues" << std::endl;
+	std::cout << "var: " << str  << std::endl;
+	std::cout << "ref: " << stringREF  << std::endl;
+	std::cout << "ptr: " << *stringPTR  << std::endl;
 	return (0);
 
-	
-}
 
+}
