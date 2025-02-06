@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Harl.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tespandj <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/06 19:52:58 by tespandj          #+#    #+#             */
+/*   Updated: 2025/02/06 19:53:00 by tespandj         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "Harl.hpp"
 
 Harl::Harl() {
@@ -21,6 +32,13 @@ void Harl::error() {
 }
 
 void	Harl::complain(std::string level) {
+	void(Harl::*functions[])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::string	opt[] = {"debug", "info", "warning", "error"};
 
-	(void)level;
+	for (int i = 0; i < 4; ++i) {
+		if (level == opt[i]) {
+			(this->*functions[i])();
+			break ;
+		}
+	}
 }
