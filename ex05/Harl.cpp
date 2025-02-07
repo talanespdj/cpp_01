@@ -11,7 +11,12 @@
 /* ************************************************************************** */
 #include "Harl.hpp"
 
-Harl::Harl() {
+Harl::Harl()
+{
+	opt[0] = "debug";
+	opt[1] = "info";
+	opt[2] = "warning";
+	opt[3] = "error";
 };
 
 Harl::~Harl() {
@@ -33,7 +38,6 @@ void Harl::error() {
 
 void	Harl::complain(std::string level) {
 	void(Harl::*functions[])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	std::string	opt[] = {"debug", "info", "warning", "error"};
 
 	for (int i = 0; i < 4; ++i) {
 		if (level == opt[i]) {

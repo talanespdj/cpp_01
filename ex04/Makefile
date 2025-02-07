@@ -1,10 +1,8 @@
-NAME = zombie
+NAME = SedIsForLosers
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98 -g3 
 
 SRCS = main.cpp \
-	Zombie.cpp \
-	zombieHorde.cpp \
 
 OBJS = $(SRCS:.cpp=.o) 
 
@@ -15,7 +13,7 @@ all: $(NAME)
         
 $(NAME): $(OBJS)
 	@$(CC) $(FLAGS) -o $(NAME) $(OBJS)
-	@echo "\033[1mHORDE built\033[0m"
+	@echo "\033[1mSedIsForLosers built\033[0m"
 
 clean:
 	@rm -rf $(OBJS)

@@ -9,34 +9,35 @@
 /*   Updated: 2025/02/04 02:28:54 by tespandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-// #include ""
 #include <iostream>
-#include <string>
-#include <cstring>
 #include <fstream>
-
+#include <sstream>
 
 void	SedIsForLosers(std::string filename, std::string s1, std::string s2) {
 
-	std::ifstream	infile(filename);
-	std::ofstream	stm(filename + ".replace");
+	std::string	name = filename + ".replace";
+	std::ifstream	infile(filename.c_str());
+	std::ofstream	stm(name.c_str());
 	std::string	line;
 
-	if (!stm)
-		std::cout << "Le fichier n'existe pas." << std::endl;
+	if (!infile) {
+		std::cout << "File doesn't exist." << std::endl;
+		return ;
+	}
+	else if (!stm) {
+		std::cout << "Cannot create the outfile." << std::endl;
+		return ;
+	}
 	while (std::getline(infile, line)) {
 
 		size_t pos = 0;
-		while (( pos = line.find(s1, pos)) != std::string::npos) {
-
-
-
-
-
-
-			pos += s1.length();
-		}		
-	}	
+		while ((pos = line.find(s1, pos)) != std::string::npos) {
+			line = line.substr(0, pos) + s2 + line.substr(pos + s1.length());
+			pos += s2.length();
+		}
+		stm << line << std::endl;
+	}
+	(void)s2;
 }
 
 int	main(int argc, char **argv)
@@ -47,5 +48,3 @@ int	main(int argc, char **argv)
 		std::cout << "respect input rules" << std::endl;
 	return (0);
 }
-
-

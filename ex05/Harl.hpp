@@ -24,6 +24,8 @@ class Harl
 		void	info();
 		void	warning();
 		void	error();
+		std::string	opt[4];
+
 
 	public:
 		Harl();

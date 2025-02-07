@@ -16,7 +16,6 @@ int	main(void)
 {
 	Harl	tzy;
 
-	tzy.complain("debug");
 	tzy.complain("error");
  	return (0);
 }
