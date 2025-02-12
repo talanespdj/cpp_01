@@ -37,10 +37,12 @@ void	Harl::filter(std::string level)
 	}
 }
 
-int	main(void)
+int	main(int argc, char **argv)
 {
 	Harl	tzy;
 
-	tzy.filter("error");
+	if (argc == 1)
+		return (1);
+	tzy.filter(argv[1]);
  	return (0);
 }

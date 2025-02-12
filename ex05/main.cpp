@@ -17,5 +17,11 @@ int	main(void)
 	Harl	tzy;
 
 	tzy.complain("error");
+	std::cout << "oqndowqindoqiwndoiqwndoiqnwd" << std::endl;
+	tzy.complain("debug");
+	tzy.complain("INFO");
+	tzy.complain("WARNING");
+	tzy.complain("ERROR");
+	tzy.complain("");
  	return (0);
 }
