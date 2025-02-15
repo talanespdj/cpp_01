@@ -17,14 +17,14 @@ void	SedIsForLosers(std::string filename, std::string s1, std::string s2) {
 
 	std::string	name = filename + ".replace";
 	std::ifstream	infile(filename.c_str());
-	std::ofstream	stm(name.c_str());
 	std::string	line;
 
 	if (!infile) {
 		std::cout << "File doesn't exist." << std::endl;
 		return ;
 	}
-	else if (!stm) {
+	std::ofstream	stm(name.c_str());
+	if (!stm) {
 		std::cout << "Cannot create the outfile." << std::endl;
 		return ;
 	}

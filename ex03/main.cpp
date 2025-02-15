@@ -25,7 +25,6 @@ int main(void)
 		HumanA bob("Bob", club);
 		bob.attack();
 		club.setType("some other type of club");
-		club.setType("FINE AHH");
 		bob.attack();
 	}
 	{

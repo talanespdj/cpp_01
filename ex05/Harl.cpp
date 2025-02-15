@@ -13,10 +13,10 @@
 
 Harl::Harl()
 {
-	opt[0] = "debug";
-	opt[1] = "info";
-	opt[2] = "warning";
-	opt[3] = "error";
+	opt[0] = "DEBUG";
+	opt[1] = "INFO";
+	opt[2] = "WARNING";
+	opt[3] = "ERROR";
 };
 
 Harl::~Harl() {

@@ -24,13 +24,13 @@ void	Harl::filter(std::string level)
 	switch (equiv)
 	{
 		case 0:
-			tzy.complain("debug");
+			tzy.complain("DEBUG");
 		case 1:
-			tzy.complain("info");
+			tzy.complain("INFO");
 		case 2:
-			tzy.complain("warning");
+			tzy.complain("WARNING");
 		case 3:
-			tzy.complain("error");
+			tzy.complain("ERROR");
 			break ;
 		default:
 			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;

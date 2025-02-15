@@ -19,13 +19,8 @@ int	main(void)
 {
 	Zombie	*zbi = NULL;
 
-	zbi = zombieHorde(10, "je suis talan");
-	for(int x = 0; x < 10; ++x) {
-		zbi[x].announce();
-	}
+	zbi = zombieHorde(3, "Mikaya");
 	delete [] zbi;
 	return (0);
-
-	
 }
 

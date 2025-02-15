@@ -18,7 +18,11 @@
 int	main(void)
 {
 	Zombie	zbi("zbi");
+	Zombie	*Talan = newZombie("Talan");
 
 	zbi.announce();
+	Talan->announce();
+	randomChump("HQHQHQHQHQQHHQHQ");
+	delete (Talan);
 	return (0);
 }
