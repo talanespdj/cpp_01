@@ -9,14 +9,10 @@
 /*   Updated: 2025/02/07 06:36:59 by tespandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include <iostream>
 #include "Weapon.hpp"
 #include "HumanA.hpp"
 #include "HumanB.hpp"
-#include <iostream>
-#include <string>
-#include <cstring>
-#include <unistd.h>
 
 int main(void)
 {

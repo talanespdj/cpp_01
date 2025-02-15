@@ -12,9 +12,11 @@
 #include "HumanB.hpp"
 
 HumanB::HumanB(std::string data) : name(data), wpn(NULL) {
+	std::cout << this->name << " HumanB joined the battlefield" << std::endl;
 };
 
 HumanB::~HumanB() {
+	std::cout << this->name << " HumanB died." << std::endl;
 };
 
 void	HumanB::setWeapon(Weapon &wpn_data) {
